@@ -1,0 +1,12 @@
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\bin\Debug\net9.0\AntiPlagiarism.Analysis.Domain.deps.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\bin\Debug\net9.0\AntiPlagiarism.Analysis.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\bin\Debug\net9.0\AntiPlagiarism.Analysis.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.AssemblyInfoInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.AssemblyInfo.cs
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.sourcelink.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\refint\AntiPlagiarism.Analysis.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\AntiPlagiarism.Analysis.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Domain\obj\Debug\net9.0\ref\AntiPlagiarism.Analysis.Domain.dll

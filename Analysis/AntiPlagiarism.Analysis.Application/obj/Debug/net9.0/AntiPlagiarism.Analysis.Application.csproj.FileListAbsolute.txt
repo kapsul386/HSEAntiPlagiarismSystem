@@ -1,0 +1,16 @@
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\bin\Debug\net9.0\AntiPlagiarism.Analysis.Application.deps.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\bin\Debug\net9.0\AntiPlagiarism.Analysis.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\bin\Debug\net9.0\AntiPlagiarism.Analysis.Application.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\bin\Debug\net9.0\AntiPlagiarism.Analysis.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\bin\Debug\net9.0\AntiPlagiarism.Analysis.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.csproj.AssemblyReference.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.AssemblyInfoInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.AssemblyInfo.cs
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.csproj.CoreCompileInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.sourcelink.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlag.76A2C22C.Up2Date
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\refint\AntiPlagiarism.Analysis.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\AntiPlagiarism.Analysis.Application.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Application\obj\Debug\net9.0\ref\AntiPlagiarism.Analysis.Application.dll

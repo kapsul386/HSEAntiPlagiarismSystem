@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "DpqQboMNaOlBLpn3BBzLdl/u8iYr8kpQmh/RNa4NqS0=",
+  "Source": "AntiPlagiarism.FileStoring.Api",
+  "BasePath": "_content/AntiPlagiarism.FileStoring.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AntiPlagiarism.FileStoring.Application/1.0.0": {
+        "dependencies": {
+          "AntiPlagiarism.FileStoring.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AntiPlagiarism.FileStoring.Application.dll": {}
+        }
+      },
+      "AntiPlagiarism.FileStoring.Domain/1.0.0": {
+        "runtime": {
+          "AntiPlagiarism.FileStoring.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AntiPlagiarism.FileStoring.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AntiPlagiarism.FileStoring.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

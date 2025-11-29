@@ -1,0 +1,12 @@
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.deps.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.AssemblyInfoInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.AssemblyInfo.cs
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.sourcelink.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\refint\AntiPlagiarism.FileStoring.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Domain\obj\Debug\net9.0\ref\AntiPlagiarism.FileStoring.Domain.dll

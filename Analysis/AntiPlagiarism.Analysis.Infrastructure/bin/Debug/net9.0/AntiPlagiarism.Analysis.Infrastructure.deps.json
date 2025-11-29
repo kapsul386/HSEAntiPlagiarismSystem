@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AntiPlagiarism.Analysis.Infrastructure/1.0.0": {
+        "dependencies": {
+          "AntiPlagiarism.Analysis.Application": "1.0.0",
+          "AntiPlagiarism.Analysis.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AntiPlagiarism.Analysis.Infrastructure.dll": {}
+        }
+      },
+      "AntiPlagiarism.Analysis.Application/1.0.0": {
+        "dependencies": {
+          "AntiPlagiarism.Analysis.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AntiPlagiarism.Analysis.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AntiPlagiarism.Analysis.Domain/1.0.0": {
+        "runtime": {
+          "AntiPlagiarism.Analysis.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AntiPlagiarism.Analysis.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AntiPlagiarism.Analysis.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AntiPlagiarism.Analysis.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Application.deps.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Application.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Domain.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.csproj.AssemblyReference.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.AssemblyInfoInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.AssemblyInfo.cs
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.csproj.CoreCompileInputs.cache
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.sourcelink.json
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlag.57B9D091.Up2Date
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\refint\AntiPlagiarism.FileStoring.Application.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Application.pdb
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Application\obj\Debug\net9.0\ref\AntiPlagiarism.FileStoring.Application.dll
