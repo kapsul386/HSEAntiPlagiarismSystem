@@ -1,0 +1,41 @@
+services:
+  filestoring:
+    build:
+      context: ./FileStoring/AntiPlagiarism.FileStoring.Api
+      dockerfile: Dockerfile
+    container_name: filestoring
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - FILESTORING_ROOT=/app/data/files
+    volumes:
+      - ./data/files:/app/data/files
+    ports:
+      - "5014:8080"
+    restart: unless-stopped
+
+  analysis:
+    build:
+      context: ./Analysis/AntiPlagiarism.Analysis.Api
+      dockerfile: Dockerfile
+    container_name: analysis
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+    ports:
+      - "5189:8080"
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: ./Gateway/AntiPlagiarism.Gateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    depends_on:
+      - filestoring
+      - analysis
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - FILESTORING_URL=http://filestoring:8080
+      - ANALYSIS_URL=http://analysis:8080
+    ports:
+      - "5000:8080"
+    restart: unless-stopped

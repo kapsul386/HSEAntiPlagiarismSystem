@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AntiPlagiarism.FileStoring.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+595dd68bbd12714e766c1c87aa1eaf775d3a70df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+581bb243259b1e5e6fad5ed0b19c5ceb368e9d41")]
 [assembly: System.Reflection.AssemblyProductAttribute("AntiPlagiarism.FileStoring.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AntiPlagiarism.FileStoring.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
