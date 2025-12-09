@@ -9,6 +9,7 @@
       "AntiPlagiarism.Analysis.Api/1.0.0": {
         "dependencies": {
           "AntiPlagiarism.Analysis.Application": "1.0.0",
+          "AntiPlagiarism.Analysis.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.3"
         },
         "runtime": {
@@ -26,6 +27,12 @@
           }
         }
       },
+      "Microsoft.Extensions.DependencyInjection/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {},
       "Microsoft.OpenApi/1.6.17": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -52,6 +59,19 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "AntiPlagiarism.Analysis.Infrastructure/1.0.0": {
+        "dependencies": {
+          "AntiPlagiarism.Analysis.Application": "1.0.0",
+          "AntiPlagiarism.Analysis.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0"
+        },
+        "runtime": {
+          "AntiPlagiarism.Analysis.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -68,6 +88,20 @@
       "path": "microsoft.aspnetcore.openapi/9.0.3",
       "hashPath": "microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512"
     },
+    "Microsoft.Extensions.DependencyInjection/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MCPrg7v3QgNMr0vX4vzRXvkNGgLg8vKWX0nKCWUxu2uPyMsaRgiRc1tHBnbTcfJMhMKj2slE/j2M9oGkd25DNw==",
+      "path": "microsoft.extensions.dependencyinjection/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.6.17": {
       "type": "package",
       "serviceable": true,
@@ -81,6 +115,11 @@
       "sha512": ""
     },
     "AntiPlagiarism.Analysis.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AntiPlagiarism.Analysis.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

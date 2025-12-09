@@ -36,3 +36,5 @@ C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Ana
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Api\obj\Debug\net9.0\AntiPlagiarism.Analysis.Api.pdb
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Api\obj\Debug\net9.0\AntiPlagiarism.Analysis.Api.genruntimeconfig.cache
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Api\obj\Debug\net9.0\ref\AntiPlagiarism.Analysis.Api.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Api\bin\Debug\net9.0\AntiPlagiarism.Analysis.Infrastructure.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\Analysis\AntiPlagiarism.Analysis.Api\bin\Debug\net9.0\AntiPlagiarism.Analysis.Infrastructure.pdb
