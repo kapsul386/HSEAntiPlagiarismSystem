@@ -9,6 +9,7 @@
       "AntiPlagiarism.FileStoring.Api/1.0.0": {
         "dependencies": {
           "AntiPlagiarism.FileStoring.Application": "1.0.0",
+          "AntiPlagiarism.FileStoring.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.3"
         },
         "runtime": {
@@ -23,6 +24,25 @@
           "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
             "assemblyVersion": "9.0.3.0",
             "fileVersion": "9.0.325.11220"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/10.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
@@ -52,6 +72,19 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "AntiPlagiarism.FileStoring.Infrastructure/1.0.0": {
+        "dependencies": {
+          "AntiPlagiarism.FileStoring.Application": "1.0.0",
+          "AntiPlagiarism.FileStoring.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "10.0.0"
+        },
+        "runtime": {
+          "AntiPlagiarism.FileStoring.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -68,6 +101,20 @@
       "path": "microsoft.aspnetcore.openapi/9.0.3",
       "hashPath": "microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512"
     },
+    "Microsoft.Extensions.DependencyInjection/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f0RBabswJq+gRu5a+hWIobrLWiUYPKMhCD9WO3sYBAdSy3FFH14LMvLVFZc2kPSCimBLxSuitUhsd6tb0TAY6A==",
+      "path": "microsoft.extensions.dependencyinjection/10.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.6.17": {
       "type": "package",
       "serviceable": true,
@@ -81,6 +128,11 @@
       "sha512": ""
     },
     "AntiPlagiarism.FileStoring.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AntiPlagiarism.FileStoring.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

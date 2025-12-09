@@ -36,3 +36,7 @@ C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Api.pdb
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\obj\Debug\net9.0\AntiPlagiarism.FileStoring.Api.genruntimeconfig.cache
 C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\obj\Debug\net9.0\ref\AntiPlagiarism.FileStoring.Api.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Infrastructure.dll
+C:\Users\ddkup\RiderProjects\HSEAntiPlagiarismSystem\FileStoring\AntiPlagiarism.FileStoring.Api\bin\Debug\net9.0\AntiPlagiarism.FileStoring.Infrastructure.pdb

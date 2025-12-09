@@ -5,22 +5,22 @@ namespace AntiPlagiarism.FileStoring.Domain.Entities;
 public class StoredFile
 {
     public FileId Id { get; private set; }
-    
+
     /// <summary>
     /// Ключ в хранилище: относительный путь на диске или key в S3/MinIO.
     /// Например: "works/2025/11/29/abc123.pdf"
     /// </summary>
-    public string StorageKey { get; private set; }
-    
+    public string StorageKey { get; private set; } = null!;
+
     /// <summary>
     /// Оригинальное имя файла, которое загрузил пользователь.
     /// </summary>
-    public string OriginalFileName { get; private set; }
-    
+    public string OriginalFileName { get; private set; } = null!;
+
     /// <summary>
     /// MIME-тип (например, "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document").
     /// </summary>
-    public string ContentType { get; private set; }
+    public string ContentType { get; private set; } = null!;
     
     /// <summary>
     /// Размер файла в байтах.
