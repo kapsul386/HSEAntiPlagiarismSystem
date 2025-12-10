@@ -6,6 +6,8 @@ public sealed class AnalysisReportModel
 
     public Guid WorkId { get; init; }
 
+    public string AssignmentId { get; init; } = string.Empty;
+
     public bool IsPlagiarism { get; init; }
 
     public string? PlagiarismSourceStudentId { get; init; }

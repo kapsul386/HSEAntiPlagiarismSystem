@@ -51,6 +51,7 @@ public sealed class AnalysisService : IAnalysisService
 
         var report = AnalysisReport.CreateCompleted(
             work.Id,
+            work.AssignmentId,               // ← важное место
             isPlagiarism,
             plagiarismSource?.StudentId,
             nowUtc);
@@ -61,6 +62,7 @@ public sealed class AnalysisService : IAnalysisService
         {
             Id = report.Id.Value,
             WorkId = work.Id.Value,
+            AssignmentId = work.AssignmentId,       // ← тоже важно
             IsPlagiarism = report.IsPlagiarism,
             PlagiarismSourceStudentId = report.PlagiarismSourceStudentId,
             CreatedAtUtc = report.CreatedAtUtc,
@@ -81,6 +83,7 @@ public sealed class AnalysisService : IAnalysisService
             {
                 Id = r.Id.Value,
                 WorkId = r.WorkId.Value,
+                AssignmentId = r.AssignmentId,       // ← читаем из доменной сущности
                 IsPlagiarism = r.IsPlagiarism,
                 PlagiarismSourceStudentId = r.PlagiarismSourceStudentId,
                 CreatedAtUtc = r.CreatedAtUtc,

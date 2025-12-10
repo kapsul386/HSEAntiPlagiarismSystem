@@ -9,6 +9,9 @@ public sealed class AnalysisReport
 
     public WorkId WorkId { get; private set; }
 
+    // Новый атрибут – по какому заданию сделан отчёт
+    public string AssignmentId { get; private set; }
+
     public bool IsPlagiarism { get; private set; }
 
     public string? PlagiarismSourceStudentId { get; private set; }
@@ -22,14 +25,21 @@ public sealed class AnalysisReport
     private AnalysisReport(
         ReportId id,
         WorkId workId,
+        string assignmentId,
         bool isPlagiarism,
         string? plagiarismSourceStudentId,
         ReportStatus status,
         DateTime createdAtUtc,
         DateTime? completedAtUtc)
     {
+        if (string.IsNullOrWhiteSpace(assignmentId))
+        {
+            throw new ArgumentException("Assignment id must be non-empty", nameof(assignmentId));
+        }
+
         Id = id;
         WorkId = workId;
+        AssignmentId = assignmentId;
         IsPlagiarism = isPlagiarism;
         PlagiarismSourceStudentId = plagiarismSourceStudentId;
         Status = status;
@@ -39,6 +49,7 @@ public sealed class AnalysisReport
 
     public static AnalysisReport CreateCompleted(
         WorkId workId,
+        string assignmentId,
         bool isPlagiarism,
         string? plagiarismSourceStudentId,
         DateTime completedAtUtc)
@@ -48,6 +59,7 @@ public sealed class AnalysisReport
         return new AnalysisReport(
             id,
             workId,
+            assignmentId,
             isPlagiarism,
             plagiarismSourceStudentId,
             ReportStatus.Completed,

@@ -1,0 +1,116 @@
+namespace CSJson;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+public interface IFragmentManager
+{
+    void LoadData(string path);
+    void GetData(string jsonData);
+    List<IJsonObject> FilterData(bool toFile, string filePath);
+    void SortData(bool toFile, string filePath);
+    void DisplayData(List<IJsonObject> data, bool toFile, string filePath);
+}
+
+public class FragmentManager : IFragmentManager
+{
+    private List<Fragment> _fragments = new List<Fragment>();
+
+    /// <summary>
+    /// Разбирает JSON-массив и возвращает список объектов.
+    /// </summary>
+    private static List<object> ParseArray(string json, ref int index)
+    {
+        var array = new List<object>();
+        index++;
+        while (index < json.Length)
+        {
+            SkipWhitespace(json, ref index);
+            if (json[index] == ']') { index++; return array; }
+            array.Add(ParseValue(json, ref index));
+            SkipWhitespace(json, ref index);
+            if (json[index] == ',') index++;
+        }
+        throw new FormatException("Незавершенный массив");
+    }
+
+    /// <summary>
+    /// Разбирает строковое значение из JSON.
+    /// </summary>
+    private static string ParseString(string json, ref int index)
+    {
+        index++;
+        var sb = new StringBuilder();
+        while (json[index] != '"')
+        {
+            sb.Append(json[index]);
+            index++;
+        }
+        index++;
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Разбирает число из JSON.
+    /// </summary>
+    private static object ParseNumber(string json, ref int index)
+    {
+        var start = index;
+        while (char.IsDigit(json[index]) || json[index] == '.' || json[index] == '-') index++;
+        return double.TryParse(json.Substring(start, index - start), out double num) ? (object)num : throw new FormatException("Ошибка числа");
+    }
+
+    /// <summary>
+    /// Разбирает булево значение (true/false) из JSON.
+    /// </summary>
+    private static object ParseBool(string json, ref int index)
+    {
+        if (json.Substring(index, 4) == "true") { index += 4; return true; }
+        if (json.Substring(index, 5) == "false") { index += 5; return false; }
+        throw new FormatException("Ошибка булева значения");
+    }
+
+    /// <summary>
+    /// Разбирает null из JSON.
+    /// </summary>
+    private static object ParseNull(string json, ref int index)
+    {
+        if (json.Substring(index, 4) == "null") { index += 4; return null; }
+        throw new FormatException("Ошибка null значения");
+    }
+
+    /// <summary>
+    /// Создает объект Fragment из JSON-данных.
+    /// </summary>
+    private static Fragment ParseFragment(Dictionary<string, object> data)
+    {
+        return new Fragment(
+            data.ContainsKey("id") ? data["id"].ToString() : string.Empty,
+            data.ContainsKey("label") ? data["label"].ToString() : string.Empty,
+            data.ContainsKey("description") ? data["description"].ToString() : string.Empty,
+            data.ContainsKey("aspects") && data["aspects"] is Dictionary<string, object> aspectsDict
+                ? new Aspects(aspectsDict.ToDictionary(kv => kv.Key, kv => Convert.ToInt32(kv.Value ?? 0)))
+                : new Aspects(),
+            data.ContainsKey("slots") && data["slots"] is List<object> slots
+                ? slots.OfType<Dictionary<string, object>>().Select(ParseSlot).ToList()
+                : new List<Slot>()
+        );
+    }
+
+    /// <summary>
+    /// Создает объект Slot из JSON-данных.
+    /// </summary>
+    private static Slot ParseSlot(Dictionary<string, object> data)
+    {
+        return new Slot(
+            data.ContainsKey("id") ? data["id"].ToString() : string.Empty,
+            data.ContainsKey("label") ? data["label"].ToString() : string.Empty,
+            data.ContainsKey("description") ? data["description"].ToString() : string.Empty,
+            data.ContainsKey("required") && data["required"] is Dictionary<string, object> required
+                ? required.ToDictionary(kv => kv.Key, kv => Convert.ToInt32(kv.Value ?? 0))
+                : new Dictionary<string, int>(),
+            data.ContainsKey("actionid") ? data["actionid"].ToString() : string.Empty
+        );
+    }
+}

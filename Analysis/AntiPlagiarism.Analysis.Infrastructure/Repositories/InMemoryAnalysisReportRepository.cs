@@ -44,7 +44,8 @@ public sealed class InMemoryAnalysisReportRepository : IAnalysisReportRepository
             throw new InvalidOperationException($"Report with id {report.Id.Value} already exists.");
         }
 
-        var assignmentId = report.WorkId.Value.ToString(); // временно, потом можно привязать иначе
+        // Теперь индексируем по настоящему assignmentId
+        var assignmentId = report.AssignmentId;
 
         var list = _byAssignment.GetOrAdd(assignmentId, _ => new List<ReportId>());
         list.Add(report.Id);
