@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "a1e7bbf5-c561-470b-b1ba-739813cb98fc",
+		"name": "AntiPlagiarism System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50680848",
+		"_collection_link": "https://kapsul386-5348503.postman.co/workspace/Dmitry-Kuptsov's-Workspace~af9b87ee-2937-4516-82a4-3a20b6075709/collection/50680848-a1e7bbf5-c561-470b-b1ba-739813cb98fc?action=share&source=collection_link&creator=50680848"
+	},
+	"item": [
+		{
+			"name": "submit work",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"type": "file",
+							"src": "/C:/Users/ddkup/OneDrive/Desktop/qwe.txt"
+						},
+						{
+							"key": "StudentId",
+							"value": "student-2",
+							"type": "text"
+						},
+						{
+							"key": "AssignmentId",
+							"value": "hw-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/works",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/works/hw-1/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"works",
+						"hw-1",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
