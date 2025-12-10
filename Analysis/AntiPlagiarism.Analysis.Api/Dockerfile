@@ -4,8 +4,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore "AntiPlagiarism.Analysis.Api.csproj"
-RUN dotnet publish "AntiPlagiarism.Analysis.Api.csproj" -c Release -o /app/publish
+RUN dotnet restore "Analysis/AntiPlagiarism.Analysis.Api/AntiPlagiarism.Analysis.Api.csproj"
+RUN dotnet publish "Analysis/AntiPlagiarism.Analysis.Api/AntiPlagiarism.Analysis.Api.csproj" -c Release -o /app/publish
 
 # ===== RUNTIME STAGE =====
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final

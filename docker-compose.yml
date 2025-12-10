@@ -1,8 +1,8 @@
 services:
   filestoring:
     build:
-      context: ./FileStoring/AntiPlagiarism.FileStoring.Api
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: FileStoring/AntiPlagiarism.FileStoring.Api/Dockerfile
     container_name: filestoring
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:8080
@@ -15,8 +15,8 @@ services:
 
   analysis:
     build:
-      context: ./Analysis/AntiPlagiarism.Analysis.Api
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Analysis/AntiPlagiarism.Analysis.Api/Dockerfile
     container_name: analysis
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:8080
@@ -26,8 +26,8 @@ services:
 
   gateway:
     build:
-      context: ./Gateway/AntiPlagiarism.Gateway
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Gateway/AntiPlagiarism.Gateway/Dockerfile
     container_name: gateway
     depends_on:
       - filestoring

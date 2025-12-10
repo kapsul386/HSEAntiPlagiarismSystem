@@ -2,11 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# В КОНТЕКСТЕ уже лежит AntiPlagiarism.FileStoring.Api.csproj и всё рядом
+# Копируем весь репозиторий внутрь контейнера
 COPY . .
 
-RUN dotnet restore "AntiPlagiarism.FileStoring.Api.csproj"
-RUN dotnet publish "AntiPlagiarism.FileStoring.Api.csproj" -c Release -o /app/publish
+# Восстанавливаем зависимости и публикуем только FileStoring.Api
+RUN dotnet restore "FileStoring/AntiPlagiarism.FileStoring.Api/AntiPlagiarism.FileStoring.Api.csproj"
+RUN dotnet publish "FileStoring/AntiPlagiarism.FileStoring.Api/AntiPlagiarism.FileStoring.Api.csproj" -c Release -o /app/publish
 
 # ===== RUNTIME STAGE =====
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
