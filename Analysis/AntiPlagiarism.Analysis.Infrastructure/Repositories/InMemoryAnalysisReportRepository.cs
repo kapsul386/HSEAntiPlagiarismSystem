@@ -5,9 +5,16 @@ using AntiPlagiarism.Analysis.Domain.ValueObjects;
 
 namespace AntiPlagiarism.Analysis.Infrastructure.Repositories;
 
+/// <summary>
+/// In-memory реализация репозитория отчётов.
+/// Подходит для разработки и тестов.
+/// </summary>
 public sealed class InMemoryAnalysisReportRepository : IAnalysisReportRepository
 {
     private readonly ConcurrentDictionary<ReportId, AnalysisReport> _storage = new();
+
+    // Индекс для быстрого поиска по assignmentId
+    // List используется для учебного примера (не потокобезопасно)
     private readonly ConcurrentDictionary<string, List<ReportId>> _byAssignment = new();
 
     public Task<AnalysisReport?> GetByIdAsync(
@@ -44,7 +51,6 @@ public sealed class InMemoryAnalysisReportRepository : IAnalysisReportRepository
             throw new InvalidOperationException($"Report with id {report.Id.Value} already exists.");
         }
 
-        // Теперь индексируем по настоящему assignmentId
         var assignmentId = report.AssignmentId;
 
         var list = _byAssignment.GetOrAdd(assignmentId, _ => new List<ReportId>());

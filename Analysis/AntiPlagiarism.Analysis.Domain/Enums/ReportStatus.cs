@@ -1,5 +1,8 @@
 namespace AntiPlagiarism.Analysis.Domain.Enums;
 
+/// <summary>
+/// Статус обработки отчёта.
+/// </summary>
 public enum ReportStatus
 {
     Pending = 0,

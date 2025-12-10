@@ -1,5 +1,9 @@
 namespace AntiPlagiarism.Analysis.Domain.ValueObjects;
 
+/// <summary>
+/// Идентификатор отчёта как Value Object.
+/// Гарантирует валидность и неизменяемость.
+/// </summary>
 public readonly struct ReportId
 {
     public Guid Value { get; }

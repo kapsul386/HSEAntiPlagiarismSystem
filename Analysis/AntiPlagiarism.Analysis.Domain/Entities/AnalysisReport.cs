@@ -3,13 +3,16 @@ using AntiPlagiarism.Analysis.Domain.ValueObjects;
 
 namespace AntiPlagiarism.Analysis.Domain.Entities;
 
+/// <summary>
+/// Доменная сущность отчёта анализа.
+/// </summary>
 public sealed class AnalysisReport
 {
     public ReportId Id { get; }
 
     public WorkId WorkId { get; private set; }
 
-    // Новый атрибут – по какому заданию сделан отчёт
+    /// <summary>Задание, в рамках которого сдана работа.</summary>
     public string AssignmentId { get; private set; }
 
     public bool IsPlagiarism { get; private set; }
@@ -47,6 +50,9 @@ public sealed class AnalysisReport
         CompletedAtUtc = completedAtUtc;
     }
 
+    /// <summary>
+    /// Финализированный отчёт (текущая версия анализа синхронная).
+    /// </summary>
     public static AnalysisReport CreateCompleted(
         WorkId workId,
         string assignmentId,

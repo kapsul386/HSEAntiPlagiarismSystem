@@ -2,10 +2,12 @@ using AntiPlagiarism.Analysis.Application.Abstractions;
 using AntiPlagiarism.Analysis.Application.Models;
 using AntiPlagiarism.Analysis.Domain.Abstractions;
 using AntiPlagiarism.Analysis.Domain.Entities;
-using AntiPlagiarism.Analysis.Domain.ValueObjects;
 
 namespace AntiPlagiarism.Analysis.Application.Services;
 
+/// <summary>
+/// Бизнес-логика анализа работ.
+/// </summary>
 public sealed class AnalysisService : IAnalysisService
 {
     private readonly IWorkRepository _workRepository;
@@ -28,6 +30,7 @@ public sealed class AnalysisService : IAnalysisService
     {
         var nowUtc = DateTime.UtcNow;
 
+        // Фиксируем сдачу
         var work = WorkSubmission.CreateNew(
             studentId,
             assignmentId,
@@ -37,22 +40,20 @@ public sealed class AnalysisService : IAnalysisService
 
         await _workRepository.AddAsync(work, cancellationToken);
 
+        // Ищем совпавшие работы в рамках задания
         var previousWorks = await _workRepository.GetByAssignmentAsync(
             assignmentId,
             cancellationToken);
 
         var plagiarismSource = previousWorks
-            .Where(w => w.Id.Value != work.Id.Value)
             .Where(w => w.ContentFingerprint == contentFingerprint)
             .OrderBy(w => w.SubmittedAtUtc)
             .FirstOrDefault(w => w.StudentId != studentId);
 
-        var isPlagiarism = plagiarismSource != null;
-
         var report = AnalysisReport.CreateCompleted(
             work.Id,
-            work.AssignmentId,               // ← важное место
-            isPlagiarism,
+            work.AssignmentId,
+            plagiarismSource is not null,
             plagiarismSource?.StudentId,
             nowUtc);
 
@@ -62,7 +63,7 @@ public sealed class AnalysisService : IAnalysisService
         {
             Id = report.Id.Value,
             WorkId = work.Id.Value,
-            AssignmentId = work.AssignmentId,       // ← тоже важно
+            AssignmentId = work.AssignmentId,
             IsPlagiarism = report.IsPlagiarism,
             PlagiarismSourceStudentId = report.PlagiarismSourceStudentId,
             CreatedAtUtc = report.CreatedAtUtc,
@@ -78,19 +79,17 @@ public sealed class AnalysisService : IAnalysisService
             assignmentId,
             cancellationToken);
 
-        var result = reports
+        return reports
             .Select(r => new AnalysisReportModel
             {
                 Id = r.Id.Value,
                 WorkId = r.WorkId.Value,
-                AssignmentId = r.AssignmentId,       // ← читаем из доменной сущности
+                AssignmentId = r.AssignmentId,
                 IsPlagiarism = r.IsPlagiarism,
                 PlagiarismSourceStudentId = r.PlagiarismSourceStudentId,
                 CreatedAtUtc = r.CreatedAtUtc,
                 CompletedAtUtc = r.CompletedAtUtc
             })
             .ToArray();
-
-        return result;
     }
 }

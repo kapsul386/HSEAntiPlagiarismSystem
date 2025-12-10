@@ -1,5 +1,8 @@
 namespace AntiPlagiarism.Analysis.Domain.ValueObjects;
 
+/// <summary>
+/// Идентификатор сдачи работы (Value Object).
+/// </summary>
 public readonly struct WorkId
 {
     public Guid Value { get; }

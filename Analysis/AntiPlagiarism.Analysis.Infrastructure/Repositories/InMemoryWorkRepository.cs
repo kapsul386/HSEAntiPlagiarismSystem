@@ -5,6 +5,10 @@ using AntiPlagiarism.Analysis.Domain.ValueObjects;
 
 namespace AntiPlagiarism.Analysis.Infrastructure.Repositories;
 
+/// <summary>
+/// In-memory хранилище сдач работ.
+/// Используется для разработки и тестов.
+/// </summary>
 public sealed class InMemoryWorkRepository : IWorkRepository
 {
     private readonly ConcurrentDictionary<WorkId, WorkSubmission> _storage = new();
