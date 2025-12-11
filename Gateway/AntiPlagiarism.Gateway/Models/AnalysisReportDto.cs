@@ -1,5 +1,8 @@
 namespace AntiPlagiarism.Gateway.Models;
 
+/// <summary>
+/// Отчёт анализа, полученный от сервиса Analysis.
+/// </summary>
 public sealed class AnalysisReportDto
 {
     public Guid Id { get; init; }

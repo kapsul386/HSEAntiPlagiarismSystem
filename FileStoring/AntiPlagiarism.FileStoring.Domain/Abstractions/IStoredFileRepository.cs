@@ -5,12 +5,18 @@ namespace AntiPlagiarism.FileStoring.Domain.Abstractions;
 
 public interface IStoredFileRepository
 {
-    Task<StoredFile?> GetByIdAsync(FileId id, CancellationToken cancellationToken = default);
+    Task<StoredFile?> GetByIdAsync(
+        FileId id,
+        CancellationToken cancellationToken = default);
     
-    Task AddAsync(StoredFile file, CancellationToken cancellationToken = default);
-    
+    Task AddAsync(
+        StoredFile file,
+        CancellationToken cancellationToken = default);
+
     /// <summary>
-    /// Обновление может пригодиться, если захотим помечать файл удалённым или переносить.
+    /// Может потребоваться в будущем — например, при логическом удалении или переносе файла.
     /// </summary>
-    Task UpdateAsync(StoredFile file, CancellationToken cancellationToken = default);
+    Task UpdateAsync(
+        StoredFile file,
+        CancellationToken cancellationToken = default);
 }

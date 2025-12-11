@@ -1,5 +1,8 @@
 namespace AntiPlagiarism.FileStoring.Application.Models;
 
+/// <summary>
+/// Метаданные сохранённого файла.
+/// </summary>
 public sealed class StoredFileModel
 {
     public string Id { get; init; } = null!;

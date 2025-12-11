@@ -22,7 +22,7 @@ public static class DependencyInjection
         // Физическое хранилище файлов
         services.AddSingleton<IFileStorage>(_ => new FileSystemFileStorage(baseDirectory));
 
-        // Хранилище метаданных (пока in-memory)
+        // Хранилище метаданных (in-memory реализация)
         services.AddSingleton<IStoredFileRepository, InMemoryStoredFileRepository>();
 
         // Application-сервис

@@ -7,6 +7,9 @@ using AntiPlagiarism.FileStoring.Domain.ValueObjects;
 
 namespace AntiPlagiarism.FileStoring.Application.Services;
 
+/// <summary>
+/// Координирует физическое сохранение файла и запись метаданных.
+/// </summary>
 public sealed class FileStoringService : IFileStoringService
 {
     private readonly IFileStorage _fileStorage;
@@ -27,20 +30,19 @@ public sealed class FileStoringService : IFileStoringService
         long sizeBytes,
         CancellationToken cancellationToken = default)
     {
-        // 1. Сохраняем байты файла в физическое хранилище
+        // Сохраняем файл в физическое хранилище
         var storageKey = await _fileStorage.SaveAsync(content, cancellationToken);
 
-        // 2. Создаём доменную сущность с проверками
+        // Создаём доменную сущность (валидация здесь)
         var storedFile = StoredFile.CreateNew(
             storageKey,
             originalFileName,
             contentType,
             sizeBytes);
 
-        // 3. Сохраняем метаданные в хранилище
+        // Сохраняем метаданные
         await _storedFileRepository.AddAsync(storedFile, cancellationToken);
 
-        // 4. Возвращаем модель наружу
         return MapToModel(storedFile);
     }
 
@@ -49,12 +51,7 @@ public sealed class FileStoringService : IFileStoringService
         CancellationToken cancellationToken = default)
     {
         var storedFile = await _storedFileRepository.GetByIdAsync(id, cancellationToken);
-        if (storedFile is null)
-        {
-            return null;
-        }
-
-        return MapToModel(storedFile);
+        return storedFile is null ? null : MapToModel(storedFile);
     }
 
     private static StoredFileModel MapToModel(StoredFile storedFile)

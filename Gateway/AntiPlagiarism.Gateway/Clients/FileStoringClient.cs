@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace AntiPlagiarism.Gateway.Clients;
 
+/// <summary>
+/// HTTP-клиент для загрузки файлов в FileStoring.
+/// </summary>
 public sealed class FileStoringClient : IFileStoringClient
 {
     private readonly HttpClient _httpClient;
@@ -22,6 +25,7 @@ public sealed class FileStoringClient : IFileStoringClient
         using var content = new MultipartFormDataContent();
         var streamContent = new StreamContent(stream);
 
+        // Передаём исходный MIME-тип файла
         streamContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
 
         content.Add(streamContent, "file", file.FileName);
@@ -29,11 +33,11 @@ public sealed class FileStoringClient : IFileStoringClient
         using var response = await _httpClient.PostAsync("/files", content, cancellationToken);
         response.EnsureSuccessStatusCode();
 
-        var result = await response.Content.ReadFromJsonAsync<StoredFileDto>(cancellationToken: cancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<StoredFileDto>(
+            cancellationToken: cancellationToken);
+
         if (result is null)
-        {
             throw new InvalidOperationException("FileStoring returned empty response.");
-        }
 
         return result;
     }

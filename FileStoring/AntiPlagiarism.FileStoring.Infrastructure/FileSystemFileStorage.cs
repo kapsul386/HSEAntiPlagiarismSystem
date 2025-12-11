@@ -4,7 +4,7 @@ using AntiPlagiarism.FileStoring.Application.Abstractions;
 namespace AntiPlagiarism.FileStoring.Infrastructure.FileStorage;
 
 /// <summary>
-/// Простое файловое хранилище: пишет файлы в локальную директорию.
+/// Локальное файловое хранилище.
 /// </summary>
 public sealed class FileSystemFileStorage : IFileStorage
 {
@@ -40,8 +40,7 @@ public sealed class FileSystemFileStorage : IFileStorage
 
         await content.CopyToAsync(fileStream, cancellationToken);
 
-        // В качестве storage key храним только имя файла.
-        return fileName;
+        return fileName; // storage key
     }
 
     public Task<Stream> OpenReadAsync(

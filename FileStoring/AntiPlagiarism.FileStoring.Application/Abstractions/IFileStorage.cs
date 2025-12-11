@@ -17,7 +17,6 @@ public interface IFileStorage
 
     /// <summary>
     /// Открыть файл для чтения по storage key.
-    /// (пригодится, если нужно будет отдавать файл наружу).
     /// </summary>
     Task<Stream> OpenReadAsync(
         string storageKey,

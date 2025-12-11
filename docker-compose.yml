@@ -5,24 +5,31 @@ services:
       dockerfile: FileStoring/AntiPlagiarism.FileStoring.Api/Dockerfile
     container_name: filestoring
     environment:
-      - ASPNETCORE_URLS=http://0.0.0.0:8080
       - FILESTORING_ROOT=/app/data/files
     volumes:
       - ./data/files:/app/data/files
     ports:
       - "5014:8080"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/openapi/v1.json"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   analysis:
     build:
       context: .
       dockerfile: Analysis/AntiPlagiarism.Analysis.Api/Dockerfile
     container_name: analysis
-    environment:
-      - ASPNETCORE_URLS=http://0.0.0.0:8080
     ports:
       - "5189:8080"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/openapi/v1.json"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   gateway:
     build:
@@ -33,9 +40,13 @@ services:
       - filestoring
       - analysis
     environment:
-      - ASPNETCORE_URLS=http://0.0.0.0:8080
       - FILESTORING_URL=http://filestoring:8080
       - ANALYSIS_URL=http://analysis:8080
     ports:
       - "5000:8080"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/openapi/v1.json"]
+      interval: 5s
+      timeout: 3s
+      retries: 20

@@ -1,5 +1,8 @@
 namespace AntiPlagiarism.Gateway.Models;
 
+/// <summary>
+/// Метаданные файла, полученные из FileStoring.
+/// </summary>
 public sealed class StoredFileDto
 {
     public Guid Id { get; init; }

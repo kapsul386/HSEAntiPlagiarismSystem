@@ -6,8 +6,8 @@ using AntiPlagiarism.FileStoring.Domain.ValueObjects;
 namespace AntiPlagiarism.FileStoring.Infrastructure.Repositories;
 
 /// <summary>
-/// Простое in-memory хранилище метаданных файлов.
-/// Подходит для прототипа / демо.
+/// In-memory хранилище метаданных файлов.
+/// Используется для разработки и прототипирования.
 /// </summary>
 public sealed class InMemoryStoredFileRepository : IStoredFileRepository
 {

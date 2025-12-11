@@ -3,6 +3,9 @@ using AntiPlagiarism.Gateway.Models;
 
 namespace AntiPlagiarism.Gateway.Clients;
 
+/// <summary>
+/// HTTP-клиент для обращения к сервису анализа.
+/// </summary>
 public sealed class AnalysisClient : IAnalysisClient
 {
     private readonly HttpClient _httpClient;
@@ -12,6 +15,7 @@ public sealed class AnalysisClient : IAnalysisClient
         _httpClient = httpClient;
     }
 
+    // Внутренняя модель запроса к Analysis API
     private sealed class SubmitWorkPayload
     {
         public string StudentId { get; init; } = string.Empty;
@@ -42,7 +46,9 @@ public sealed class AnalysisClient : IAnalysisClient
 
         response.EnsureSuccessStatusCode();
 
-        var result = await response.Content.ReadFromJsonAsync<AnalysisReportDto>(cancellationToken: cancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<AnalysisReportDto>(
+            cancellationToken: cancellationToken);
+
         if (result is null)
         {
             throw new InvalidOperationException("Analysis service returned empty response.");
@@ -61,7 +67,9 @@ public sealed class AnalysisClient : IAnalysisClient
 
         response.EnsureSuccessStatusCode();
 
-        var result = await response.Content.ReadFromJsonAsync<List<AnalysisReportDto>>(cancellationToken: cancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<List<AnalysisReportDto>>(
+            cancellationToken: cancellationToken);
+
         return result ?? new List<AnalysisReportDto>();
     }
 }
